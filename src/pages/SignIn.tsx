@@ -26,17 +26,17 @@ export const SignIn = () => {
       <header className="flex flex-col items-center">
         <Logo />
 
-        <Heading size="lg" className="mt-4">
+        <Heading size="lg" className="mt-4 xs:max-sm:text-xl">
           Ignite Lab
         </Heading>
-        <Text size="lg" className="text-gray-400 mt-1">
+        <Text size="lg" className="text-gray-400 mt-1 xs:max-sm:text-sm">
           Faça login e comece a usar!
         </Text>
       </header>
 
       <form
         onSubmit={handleSignIn}
-        className="flex flex-col gap-4 items-stretch w-full max-w-sm mt-10"
+        className="flex flex-col gap-4 items-stretch w-full max-w-sm mt-10 xs:max-sm:px-5 xs:max-sm:mt-5 "
       >
         {isUserSignedIn && <Text>Login realizado!</Text>}
         <label htmlFor="email" className="flex flex-col gap-3">

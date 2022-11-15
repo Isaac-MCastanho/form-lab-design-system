@@ -1,7 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
+    screens: {
+      xs: "320px",
+      ...defaultTheme.screens,
+    },
+
     fontSize: {
       xs: 14,
       sm: 16,
