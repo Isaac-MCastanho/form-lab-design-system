@@ -12,11 +12,9 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
-    interactionsDebugger: true, 
+    interactionsDebugger: true,
   },
-  "staticDirs":[
-    "../public"
-  ]
+  staticDirs: ["../public"],
   viteFinal: (config, { configType }) => {
     if (configType == "PRODUCTION") {
       config.base = "/form-lab-design-system/";

@@ -1,7 +1,7 @@
 import { Envelope, Lock } from "phosphor-react";
 import { FormEvent, useState } from "react";
 import axios from "axios";
-import { Button } from "./../../components/Button";
+import { ActionButton } from "../../components/ActionButton";
 import { Checkbox } from "./../../components/Checkbox";
 import { Heading } from "./../../components/Heading";
 import { Text } from "./../../components/Text";
@@ -73,9 +73,9 @@ export const SignIn = () => {
           </Text>
         </label>
 
-        <Button type="submit" className="mt-4">
+        <ActionButton type="submit" className="mt-4">
           Entrar na plataforma
-        </Button>
+        </ActionButton>
       </form>
 
       <footer className="flex flex-col items-center gap-4 mt-8">
