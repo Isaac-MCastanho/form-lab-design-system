@@ -1,13 +1,12 @@
 import { Envelope, Lock } from "phosphor-react";
 import { FormEvent, useState } from "react";
 import axios from "axios";
-import { Button } from "./../components/Button";
-import { Checkbox } from "./../components/Checkbox";
-import { Heading } from "./../components/Heading";
-import { Text } from "./../components/Text";
-import { TextInput } from "./../components/TextInput";
-import { Logo } from "./../Logo";
-
+import { Button } from "./../../components/Button";
+import { Checkbox } from "./../../components/Checkbox";
+import { Heading } from "./../../components/Heading";
+import { Text } from "./../../components/Text";
+import { TextInput } from "./../../components/TextInput";
+import { Logo } from "./../../Logo";
 export const SignIn = () => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
 
@@ -27,7 +26,7 @@ export const SignIn = () => {
         <Logo />
 
         <Heading size="lg" className="mt-4 xs:max-sm:text-xl">
-          Ignite Lab
+          Vamos ao Trabalho
         </Heading>
         <Text size="lg" className="text-gray-400 mt-1 xs:max-sm:text-sm">
           Faça login e comece a usar!
