@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { LinkButton, LinkButtonProps } from ".";
 import { MemoryRouter } from "react-router-dom";
 

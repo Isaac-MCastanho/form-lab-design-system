@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { clsx } from "clsx";
 import { Slot } from "@radix-ui/react-slot";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { LinkProps } from "react-router-dom";
 
 export interface LinkButtonProps extends LinkProps {
