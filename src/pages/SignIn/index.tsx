@@ -7,7 +7,6 @@ import { Heading } from "./../../components/Heading";
 import { Text } from "./../../components/Text";
 import { TextInput } from "./../../components/TextInput";
 import { Logo } from "./../../Logo";
-import { Theme } from "./../../Theme/Theme";
 export const SignIn = () => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
 

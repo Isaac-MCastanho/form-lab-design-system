@@ -1,9 +1,5 @@
-import { Cake } from "phosphor-react";
-
 import { Heading } from "../../components/Heading";
 import { Text } from "../../components/Text";
-
-import { Theme } from "../../Theme/Theme";
 
 export const CreateAnAccount = () => {
   return (

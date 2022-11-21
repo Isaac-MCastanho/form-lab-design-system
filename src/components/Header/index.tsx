@@ -14,14 +14,14 @@ export const Header = () => {
     setIsOpenMenu(!isOpenMenu);
   };
   return (
-    <C.Conatiner>
+    <C.Container>
       <Link to="/">
         <Logotype />
       </Link>
 
       <ButtonBurger onClick={handleMenu} isOpen={isOpenMenu} />
 
-      <C.Nav open={isOpenMenu}>
+      <C.Nav className="bg-gray-900 gap-40 transition-all" open={isOpenMenu}>
         <ul className=" flex-1 flex items-center justify-center gap-8 h-full relative bottom-[-2px] max-md:h-auto max-md:flex-none max-md:flex-col">
           <LinkNav
             onClick={() => {
@@ -71,6 +71,6 @@ export const Header = () => {
           </LinkButton>
         </div>
       </C.Nav>
-    </C.Conatiner>
+    </C.Container>
   );
 };
