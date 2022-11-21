@@ -33,9 +33,7 @@ export default {
 export const Default: StoryFn<LinkNavProps> = ({ children }: LinkNavProps) => {
   return (
     <MemoryRouter>
-      <LinkNav isActive={false} to="/">
-        {children}
-      </LinkNav>
+      <LinkNav to="/">{children}</LinkNav>
     </MemoryRouter>
   );
 };
@@ -45,28 +43,16 @@ Default.args = {
   isChild: false,
 };
 
-export const Active: StoryFn<LinkNavProps> = ({
-  children,
-  isActive,
-}: LinkNavProps) => {
+export const Active: StoryFn<LinkNavProps> = ({ children }: LinkNavProps) => {
   return (
     <MemoryRouter>
-      <LinkNav isActive={isActive} to="/">
-        {children}
-      </LinkNav>
+      <LinkNav to="/">{children}</LinkNav>
     </MemoryRouter>
   );
 };
 
 Active.args = {
   children: "Contact",
-  isActive: true,
 };
 
-Active.argTypes = {
-  isActive: {
-    table: {
-      disable: false,
-    },
-  },
-};
+Active.argTypes = {};
