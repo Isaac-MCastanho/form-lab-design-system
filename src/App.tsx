@@ -1,7 +1,13 @@
-import { RouterProvider } from "react-router-dom";
 import "./styles/global.css";
-import { Router } from "./Routers/Router";
+
+import { Theme } from "./Theme/Theme";
+import { MainRoutes } from "./Routers/routes";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export function App() {
-  return <RouterProvider router={Router} />;
+  return (
+    <Router>
+      <MainRoutes />
+    </Router>
+  );
 }

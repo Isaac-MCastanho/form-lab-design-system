@@ -2,13 +2,14 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
+  Routes,
 } from "react-router-dom";
 import { About } from "../pages/About";
 import { Community } from "../pages/Community";
 import { CreateAnAccount } from "../pages/CreateAnAccount";
 import { Home } from "../pages/Home";
-import { SignIn } from "./../pages/SignIn/index";
-import { Theme } from "./../Theme/Theme";
+import { SignIn } from "../pages/SignIn/index";
+import { Theme } from "../Theme/Theme";
 
 // export const Router = createBrowserRouter([
 //   {
@@ -39,14 +40,16 @@ import { Theme } from "./../Theme/Theme";
 //     ],
 //   },
 // ]);
-export const Router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Theme />}>
-      <Route path="/" element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="community" element={<Community />} />
-      <Route path="signin" element={<SignIn />} />
-      <Route path="createanaccount" element={<CreateAnAccount />} />
-    </Route>
-  )
-);
+export const MainRoutes = () => {
+  return (
+    <Routes>
+      <Route element={<Theme />}>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="community" element={<Community />} />
+        <Route path="signin" element={<SignIn />} />
+        <Route path="createanaccount" element={<CreateAnAccount />} />
+      </Route>
+    </Routes>
+  );
+};
