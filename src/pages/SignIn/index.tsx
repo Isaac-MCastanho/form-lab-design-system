@@ -7,6 +7,7 @@ import { Heading } from "./../../components/Heading";
 import { Text } from "./../../components/Text";
 import { TextInput } from "./../../components/TextInput";
 import { Logo } from "./../../Logo";
+import { Theme } from "./../../Theme/Theme";
 export const SignIn = () => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
 
@@ -21,7 +22,7 @@ export const SignIn = () => {
     setIsUserSignedIn(true);
   }
   return (
-    <div className="w-screen h-screen flex-col bg-gray-900 flex items-center justify-center text-gray-100 ">
+    <div className="flex flex-col items-center">
       <header className="flex flex-col items-center">
         <Logo />
 

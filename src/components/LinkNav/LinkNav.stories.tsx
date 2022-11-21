@@ -1,10 +1,10 @@
 import { Meta, StoryFn, StoryObj } from "@storybook/react";
-import { LinkText, LinkTextProps } from ".";
+import { LinkNav, LinkNavProps } from ".";
 import { MemoryRouter } from "react-router-dom";
 
 export default {
-  title: "Components/Link Text",
-  component: LinkText,
+  title: "Components/Link Nav",
+  component: LinkNav,
   args: {
     isChild: false,
   },
@@ -28,16 +28,14 @@ export default {
       },
     },
   },
-} as Meta<LinkTextProps>;
+} as Meta<LinkNavProps>;
 
-export const Default: StoryFn<LinkTextProps> = ({
-  children,
-}: LinkTextProps) => {
+export const Default: StoryFn<LinkNavProps> = ({ children }: LinkNavProps) => {
   return (
     <MemoryRouter>
-      <LinkText isActive={false} to="/">
+      <LinkNav isActive={false} to="/">
         {children}
-      </LinkText>
+      </LinkNav>
     </MemoryRouter>
   );
 };
@@ -47,15 +45,15 @@ Default.args = {
   isChild: false,
 };
 
-export const Active: StoryFn<LinkTextProps> = ({
+export const Active: StoryFn<LinkNavProps> = ({
   children,
   isActive,
-}: LinkTextProps) => {
+}: LinkNavProps) => {
   return (
     <MemoryRouter>
-      <LinkText isActive={isActive} to="/">
+      <LinkNav isActive={isActive} to="/">
         {children}
-      </LinkText>
+      </LinkNav>
     </MemoryRouter>
   );
 };
