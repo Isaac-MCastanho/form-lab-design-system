@@ -56,7 +56,7 @@ export const Header = () => {
               onClick={() => {
                 setIsOpenMenu(false);
               }}
-              to="/SignIn"
+              to="/signin"
             >
               Entrar
             </Link>
