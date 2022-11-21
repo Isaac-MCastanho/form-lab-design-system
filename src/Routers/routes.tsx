@@ -45,10 +45,10 @@ export const MainRoutes = () => {
     <Routes>
       <Route element={<Theme />}>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="community" element={<Community />} />
-        <Route path="signin" element={<SignIn />} />
-        <Route path="createanaccount" element={<CreateAnAccount />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/createanaccount" element={<CreateAnAccount />} />
       </Route>
     </Routes>
   );
