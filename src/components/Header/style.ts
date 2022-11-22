@@ -20,7 +20,7 @@ interface NavProps {
 // max-break1:justify-between
 // max-break1:px-5
 // `;
-export const Container = styled.header`
+export const Container = styled.header<{ isScholl: boolean }>`
   width: 100vw;
   height: 70px;
   display: flex;
@@ -28,7 +28,11 @@ export const Container = styled.header`
   align-items: center;
   border-bottom: 2px solid #202024;
   position: fixed;
-  background: #121214;
+
+  ${(props) =>
+    props.isScholl
+      ? "background-color:rgba(180,180,200,0.050); backdrop-filter:blur(10px) ;"
+      : "backgound:transparent;"}
 
   @media (max-width: 934px) {
     justify-content: space-between;
@@ -71,7 +75,7 @@ export const Nav = styled.nav<NavProps>`
     ${(props) =>
       props.open
         ? "top:0; left:0; opacity:1; visibility:visible;"
-        : "top:-100px; opacity:0; visibility:hidden;"}
+        : "top:-100px; left:0; opacity:0; visibility:hidden;"}
     position: fixed;
 
     height: 100vh;

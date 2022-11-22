@@ -1,3 +1,4 @@
+import * as C from "./style";
 import { Envelope, Lock } from "phosphor-react";
 import { FormEvent, useState } from "react";
 import axios from "axios";
@@ -7,6 +8,7 @@ import { Heading } from "./../../components/Heading";
 import { Text } from "./../../components/Text";
 import { TextInput } from "./../../components/TextInput";
 import { Logo } from "./../../Logo";
+
 export const SignIn = () => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
 
@@ -21,8 +23,8 @@ export const SignIn = () => {
     setIsUserSignedIn(true);
   }
   return (
-    <div className="flex flex-col items-center">
-      <header className="flex flex-col items-center">
+    <C.Container className="content-paddingTop flex flex-col items-center  pb-10">
+      <header className="flex flex-col items-center pt-8">
         <Logo />
 
         <Heading size="lg" className="mt-4 xs:max-sm:text-xl">
@@ -90,6 +92,6 @@ export const SignIn = () => {
           </a>
         </Text>
       </footer>
-    </div>
+    </C.Container>
   );
 };

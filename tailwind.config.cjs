@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: ["./src/**/*.tsx"],
@@ -43,5 +44,13 @@ module.exports = {
       fontFamily: { sans: "Inter, sans-serif" },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents, theme }) {
+      addComponents({
+        ".content-paddingTop": {
+          paddingTop: "70px",
+        },
+      });
+    }),
+  ],
 };
